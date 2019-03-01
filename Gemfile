@@ -11,6 +11,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
+gem "mysql2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"
 gem "rubocop", "~> 0.54.0", require: false
