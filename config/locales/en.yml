@@ -13,3 +13,8 @@ en:
     hello: "Welcome to the Framgia Library"
     sing_up: "Sign up now!"
     home_page: "This is the home page for the %{href1} application."
+  messenger:
+    no_data: "Sorry, the data can not be found"
+  books:
+    read: "Read"
+    all_book: "All Book"

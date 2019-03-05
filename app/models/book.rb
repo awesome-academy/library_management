@@ -6,4 +6,8 @@ class Book < ApplicationRecord
   has_many :follows
   has_many :likes
   has_many :reviews
+
+  delegate :name, to: :category, prefix: :category
+
+  scope :newest, ->{order :created_at}
 end
