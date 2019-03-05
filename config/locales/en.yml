@@ -1,4 +1,34 @@
 en:
+  admin:
+    users:
+      index:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        bnt-new_user: "New User"
+        tb-no: "No."
+        tb-id: "Id"
+        tb-name: "Name"
+        tb-email: "Email"
+        tb-phone: "Phone"
+        tb-gender: "Gender"
+        tb-action: "Action"
+      new:
+        title: "New User"
+      create:
+        msg-create: "Create User Success"
+        msg-update: "Update User Success"
+        msg-delete: "Delete User Success"
+        msg-not_found: "Not Found User "
+        msg-error: "Has Error"
+  layouts:
+    header:
+      for_admin: "For Admin"
+  shared:
+    show_notification:
+      html:
+        title: "Notification"
+
   framgia_library: "Framgia Library"
   root: "Home"
   book: "Book"

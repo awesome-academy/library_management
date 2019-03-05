@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   enum role: {user: 0, admin: 1}
   enum gender: {male: 0, female: 1}
+
+  scope :newest, ->{order name: :ASC}
 end
