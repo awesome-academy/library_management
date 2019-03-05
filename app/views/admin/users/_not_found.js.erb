@@ -1,0 +1,4 @@
+$('#product-modal').modal('hide')
+$('#notification-modal').html('<%= j render "shared/show_notification.html" %>')
+$('#notification-div').prepend('<%= j render "shared/flash" %>')
+$('#notification-modal').modal('show')

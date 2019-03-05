@@ -6,7 +6,7 @@ $('ul.errors').html('')
 <% else %>
   $('.product-index').html('<%= escape_javascript(render "index") %>')
   $('#product-modal').modal('hide')
-  $('#notification-modal').html('<%= escape_javascript(render 'shared/show_notification.html') %>')
+  $('#notification-modal').html('<%= escape_javascript(render "shared/show_notification.html") %>')
   $('#notification-div').prepend('<%= j render "shared/flash" %>')
   $('#notification-modal').modal('show')
 <% end %>
