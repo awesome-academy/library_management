@@ -1,4 +1,6 @@
 book:
   per_page: 9
+  number_currency: 0
+  price: "%n %u"
 user:
   per_page: 10

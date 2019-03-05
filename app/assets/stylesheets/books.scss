@@ -7,6 +7,8 @@ $dark-gray: #888;
 $dark-blue: #1e3799;
 $dark-gray-1: #777;
 $very-dark-gray: #222;
+$very-pale: #e6f2ff;
+$black: #000;
 
 .product-image5 .pic-1,.product-image5 .pic-2{
   backface-visibility:hidden;
@@ -40,6 +42,13 @@ $very-dark-gray: #222;
   position:absolute;
   top:0;
   left:0;
+  background: $very-pale;
+  color: $black;
+}
+.book-content{
+  margin-left: 8px;
+  margin-top: 5px;
+  margin-right: 40px;
 }
 .product-grid5:hover .product-image5 .pic-2{
   opacity:1;
