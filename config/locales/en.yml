@@ -1,4 +1,11 @@
 en:
+  manager: "Manager"
+  user:
+    account: "%{name}"
+    profile: "Profile"
+    settings: "Setting"
+    log_out: "Log Out"
+    log_in: "Log In"
   admin:
     books:
       index:
@@ -84,6 +91,7 @@ en:
     hello: "Welcome to the Framgia Library"
     sing_up: "Sign up now!"
     home_page: "This is the home page for the %{href1} application."
+    welcome: " Wishes you a happy day !"
   messenger:
     no_data: "Sorry, the data can not be found"
   books:

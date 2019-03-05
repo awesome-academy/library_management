@@ -5,7 +5,11 @@
     <%= raw t("home.home_page",
     href1: link_to(t("framgia_library"), t("footer.link_framgia"))) %>
   </h2>
-  <%= link_to t("home.sing_up"), "#", class: "btn btn-lg btn-primary" %>
+  <% if user_signed_in? %>
+    <div><%= current_user.name %><%= t("home.welcome") %></div>
+  <% else %>
+    <%= link_to t("home.sing_up"), new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
 
 <%= image_tag("framgia.jpg", alt: "logo", class: "image_home") %>
