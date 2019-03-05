@@ -48,3 +48,5 @@ en:
   books:
     read: "Read"
     all_book: "All Book"
+    select: "Select"
+    search: "Search now!"
