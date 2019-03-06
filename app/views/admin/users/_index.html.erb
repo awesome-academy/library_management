@@ -1,0 +1,18 @@
+<% n = 0 %>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= n = count n %></td>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.gender %></td>
+    <td>
+      <%= link_to t(".show"), admin_user_path(user), remote: true %>
+      &nbsp;
+      <%= link_to t(".edit"), edit_admin_user_path(user), remote: true  %>
+      &nbsp;
+      <%= link_to t(".delete"), admin_user_delete_path(user), remote: true, class: "delete-user" %>
+    </td>
+  </tr>
+<% end %>

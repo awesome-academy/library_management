@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="well">
+    <%= link_to t(".bnt-new_user"), new_admin_user_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-product"></div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th><%= t(".tb-no") %></th>
+        <th><%= t(".tb-id") %></th>
+        <th><%= t(".tb-name") %></th>
+        <td><%= t(".tb-email") %></td>
+        <td><%= t(".tb-phone") %></td>
+        <td><%= t(".tb-gender") %></td>
+        <td><%= t(".tb-action") %></td>
+      </tr>
+    </thead>
+    <tbody class="product-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="product-modal" class="modal fade"></div>
+<div id="notification-modal" class=" modal fade"></div>
