@@ -6,6 +6,8 @@ class Admin::UsersController < ApplicationController
 
   def show; end
 
+  def delete; end
+
   def new
     @user = User.new
   end
@@ -55,15 +57,18 @@ class Admin::UsersController < ApplicationController
   end
 
   def load_users
-    @users = User.newest
+    @search = User.newest.ransack params[:q]
+    @users = @search.result.paginate page: params[:page],
+      per_page: Settings.book.per_page
   end
 
   def load_user
-    @user = User.find_by id: params[:id]
+    @user = User.find_by id: params[:user_id] if params[:user_id].present?
+    @user = User.find_by id: params[:id] if params[:id].present?
     return if @user
     respond_to do |format|
-      flash[:danger] = t(".msg-not_found")
-      format.js {}
+      flash.now[:danger] = t(".msg-not_found")
+      format.js{render partial: "not_found"}
     end
   end
 

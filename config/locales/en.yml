@@ -2,6 +2,8 @@ en:
   admin:
     users:
       index:
+        msg-search_name: "Search name .."
+        msg-search_id: "Search ID .."
         edit: "Edit"
         show: "Show"
         delete: "Delete"
@@ -15,12 +17,22 @@ en:
         tb-action: "Action"
       new:
         title: "New User"
+      edit:
+        msg-not_found: "Not Found User"
+        title: "Edit User"
       create:
         msg-create: "Create User Success"
-        msg-update: "Update User Success"
-        msg-delete: "Delete User Success"
-        msg-not_found: "Not Found User "
         msg-error: "Has Error"
+      destroy:
+        msg-delete: "Delete User Success"
+      update:
+        msg-update: "Update User Success"
+      delete:
+        msg-comf: "Are you sure you wish to delete "
+        msg-not_found: "Not Found User"
+        title: "Delete User"
+        bnt-yes: "Yes, Delete This User"
+        bnt_no: "No, Please Don't"
   layouts:
     header:
       for_admin: "For Admin"
