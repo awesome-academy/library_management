@@ -1,0 +1,5 @@
+<%= search_form_for @search, remote: true, class: "col-md-12" do |f| %>
+  <%= f.label :category_id %>
+  <%= f.select(:category_id_eq, category, prompt: t("books.select")) %>
+  <%= f.submit t("books.search"), class: "btn btn-primary" %>
+<% end %>

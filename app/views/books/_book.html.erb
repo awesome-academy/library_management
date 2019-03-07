@@ -1,19 +1,19 @@
-<div class="col-md-4 ftco-animate">
-  <div class="destination">
-    <div class="text p-3">
-      <div class="d-flex">
-        <div class="one">
-          <h3>
-            <%= link_to book.name, book %>
-          </h3>
-        </div>
-      </div>
-      <hr>
-      <p class="bottom-area d-flex">
-        <% byebug %>
-        <span><i class="icon-map-o"></i><%= book.category_name %></span>
-        <span class="ml-auto"><a href=""><%= t("books.read") %></a></span>
-      </p>
+<div class="col-md-3 col-sm-6">
+  <div class="product-grid5">
+    <div class="product-image5">
+      <a href="#">
+        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-1.jpg">
+        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-2.jpg">
+      </a>
+      <ul class="social">
+        <li><a href="" data-tip="Like"><i class="fa fa-thumbs-o-up"></i></a></li>
+        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+      </ul>
+      <%= link_to t("books.read"), book, class: "select-options fa fa-arrow-right"%>
+    </div>
+    <div class="product-content">
+        <h3 class="title"><a><%= book.name %></a></h3>
+        <div><%= book.category_name %></div>
     </div>
   </div>
 </div>
