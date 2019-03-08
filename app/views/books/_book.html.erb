@@ -2,8 +2,10 @@
   <div class="product-grid5">
     <div class="product-image5">
       <a href="#">
-        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-1.jpg">
-        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-2.jpg">
+        <img class="pic-1" src="<%= book.image %>">
+        <div class="pic-2">
+          <div class="book-content"><%= book.content %></div>
+        </div>
       </a>
       <ul class="social">
         <li><a href="" data-tip="Like"><i class="fa fa-thumbs-o-up"></i></a></li>
@@ -14,6 +16,7 @@
     <div class="product-content">
         <h3 class="title"><a><%= book.name %></a></h3>
         <div><%= book.category_name %></div>
+        <div class="price"><%= number_to_vnd(book.price) %></div>
     </div>
   </div>
 </div>

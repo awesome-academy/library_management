@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_081220) do
     t.integer "quantity_of_pages"
     t.integer "publishing_year"
     t.integer "quantity_of_books"
+    t.integer "price"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

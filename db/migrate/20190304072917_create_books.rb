@@ -9,6 +9,8 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.integer :quantity_of_pages
       t.integer :publishing_year
       t.integer :quantity_of_books
+      t.integer :price
+      t.string :image
 
       t.timestamps
     end
