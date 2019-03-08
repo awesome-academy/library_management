@@ -17,6 +17,18 @@ en:
         msg-create: "Create Book success"
       form:
         bnt-cancel: "Cancel"
+      edit:
+        msg-not_found: "Not found book"
+      delete:
+        msg-comf: "Are you sure you wish to delete "
+        msg-not_found: "Not Found Book"
+        title: "Delete Book"
+        bnt-yes: "Yes, Delete This Book"
+        bnt_no: "No, Please Don't"
+      update:
+        msg-update: "Update Book Success"
+      destroy:
+        msg-destroy: "Delete Book Success"
     users:
       index:
         msg-search_name: "Search name .."

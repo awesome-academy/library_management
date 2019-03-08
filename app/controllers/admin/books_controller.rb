@@ -39,11 +39,11 @@ class Admin::BooksController < ApplicationController
 
   def destroy
     if @book.destroy
-      flash[:succsee] = t(".msg-destroy")
+      flash[:success] = t(".msg-destroy")
     else
-      flash[succsess] = t(".msg-error")
+      flash[:danger] = t(".msg-error")
     end
-    repond_to do |format|
+    respond_to do |format|
       format.js {}
     end
   end
@@ -59,9 +59,9 @@ class Admin::BooksController < ApplicationController
   def get_book
     @book = Book.find_by id: params[:book_id] if params[:book_id].present?
     @book = Book.find_by id: params[:id] if params[:id].present?
-    return if @user
+    return if @book
     respond_to do |format|
-      flash.now[:danger] = t(".msg-not_found")
+      flash[:danger] = t(".msg-not_found")
       format.js{render partial: "not_found"}
     end
   end
@@ -69,6 +69,6 @@ class Admin::BooksController < ApplicationController
   def book_params
     params.require(:book).permit :category_id, :publisher_id, :name,
       :content, :quantity_of_pages, :publishing_year, :quantity_of_books,
-      :image, author_books_attributes: [:author_id, :book_id]
+      :image, author_books_attributes: [:id, :author_id, :book_id]
   end
 end
