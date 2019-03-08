@@ -4,5 +4,8 @@ book:
   price: "%n %u"
   quantity_min: 1
   quantity_max: 99
+  year_max: 100
+  year_min: 1
 user:
   per_page: 10
+

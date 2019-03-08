@@ -59,7 +59,7 @@ class Admin::UsersController < ApplicationController
   def load_users
     @search = User.newest.ransack params[:q]
     @users = @search.result.paginate page: params[:page],
-      per_page: Settings.book.per_page
+      per_page: Settings.user.per_page
   end
 
   def load_user

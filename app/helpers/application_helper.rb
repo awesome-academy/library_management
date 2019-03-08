@@ -7,8 +7,4 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
-
-  def count number
-    number += 1
-  end
 end

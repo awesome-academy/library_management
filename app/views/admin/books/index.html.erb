@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="well">
+    <%= link_to t(".btn-new"), new_admin_book_path, remote: true, class: "btn btn-primary" %>
+    <div class="new-product"></div>
+  </div>
+
+  <div class="input-group">
+    <%= search_form_for [:admin, @search],class: "navbar-form" do |f| %>
+      <%= f.text_field :name_cont, class: "form-control",value: "", placeholder: t(".msg-search_name_book") %>
+      <%= f.text_field :publisher_name_cont, class: "form-control",value: "", placeholder: t(".msg-search_name_publisher") %>
+      <%= f.text_field :authors_name_cont, class: "form-control",value: "", placeholder: t(".msg-search_name_author") %>
+      <div class="input-group-btn">
+      <%= button_tag class: "btn btn-default", value: "search" do %>
+        <i class="glyphicon glyphicon-search"></i>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th><%= t(".tb-id") %></th>
+        <th><%= t(".tb-name") %></th>
+        <td><%= t(".tb-autor") %></td>
+        <td><%= t(".tb-publisher") %></td>
+        <td><%= t(".tb-quantity_of_pages") %></td>
+        <td><%= t(".tb-publishing_year") %></td>
+        <td><%= t(".tb-quantity_of_books") %></td>
+      </tr>
+    </thead>
+    <tbody class="book-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="book-modal" class="modal fade"></div>
+<div id="notification-modal" class=" modal fade"></div>
+<%= will_paginate @users %>
