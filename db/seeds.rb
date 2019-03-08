@@ -50,7 +50,6 @@ Author.create!(name:"Nguyễn Thị Hồng Ngát",
 
 Book.create!(category_id: 1,
              publisher_id: 1,
-             author_id: 1,
              name: "Vội Vàng",
              content: "Vội vàng in trong tập Thơ thơ (1933- 1938), xuất bản năm 1938",
              quantity_of_pages: 200,
@@ -60,7 +59,6 @@ Book.create!(category_id: 1,
              image: "image/book/truyenkieu.jpg")
 Book.create!(category_id: 1,
              publisher_id: 2,
-             author_id: 2,
              name: "Duyên kỳ ngộ",
              content: "Trình Tinh là cô gái hiện đại vô tình xuyên không ngược về một thời đại lạ lùng không có trong lịch sử. Linh hồn cô nhập vào thân xác một cô bé sáu tuổi tên là Thanh La",
              quantity_of_pages: 147,
@@ -70,7 +68,6 @@ Book.create!(category_id: 1,
              image: "image/book/truyenkieu.jpg")
 Book.create!(category_id: 2,
              publisher_id: 3,
-             author_id: 3,
              name: "Việt Bắc",
              content: "đã được xuất bản trên báo chí trước khi in thành tập lần đầu tiên vào năm 1954.",
              quantity_of_pages: 301,
@@ -80,7 +77,6 @@ Book.create!(category_id: 2,
              image: "image/book/truyenkieu.jpg")
 Book.create!(category_id: 2,
              publisher_id: 2,
-             author_id: 4,
              name: "Anh Có Nge Không",
              content: "Bài thơ Anh có nghe không là bài thơ tình yêu nói lên tâm sự của một cô gái muốn thổ lộ tình cảm với người mình yêu.",
              quantity_of_pages: 120,
@@ -90,7 +86,6 @@ Book.create!(category_id: 2,
              image: "image/book/truyenkieu.jpg")
 Book.create!(category_id: 5,
              publisher_id: 1,
-             author_id: 5,
              name: "Trái cam vàng",
              content: "Trái cam vàng (thơ, in chung, 1973)",
              quantity_of_pages: 163,
@@ -98,6 +93,18 @@ Book.create!(category_id: 5,
              quantity_of_books: 20,
              price: 16000,
              image: "image/book/truyenkieu.jpg")
+
+AuthorBook.create!(author_id: 1,
+                   book_id: 1)
+AuthorBook.create!(author_id: 2,
+                   book_id: 2)
+AuthorBook.create!(author_id: 3,
+                   book_id: 3)
+AuthorBook.create!(author_id: 4,
+                   book_id: 4)
+AuthorBook.create!(author_id: 5,
+                   book_id: 5)
+
 Review.create!(user_id: 1,
                book_id: 2,
                content: "qua hay")

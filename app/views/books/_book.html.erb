@@ -1,10 +1,13 @@
 <div class="col-md-3 col-sm-6">
   <div class="product-grid5">
     <div class="product-image5">
-      <a href="#">
+      <a>
         <img class="pic-1" src="<%= book.image %>">
         <div class="pic-2">
           <div class="book-content"><%= book.content %></div>
+          <br>
+          <div class="book-content"><%= t("books.quantity_book") %><%= book.quantity_of_books %> <%= t("book") %></div>
+          <div class="book-content"><%= t("books.publisher") %><%= book.publisher_name %></div>
         </div>
       </a>
       <ul class="social">
