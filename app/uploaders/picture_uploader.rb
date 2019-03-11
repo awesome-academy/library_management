@@ -5,7 +5,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    "image/book"
+    "image/#{model.class.to_s.underscore}"
   end
 
   def extension_whitelist

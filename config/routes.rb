@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     resources :publishers do
       get "get_publisher"
     end
+     resources :authors do
+      get "get_author"
+    end
   end
   resources :authors, only: %i(index show)
 end

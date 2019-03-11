@@ -22,6 +22,29 @@ en:
       short: "%b %d"
       long: "%d/%m/%Y"
   admin:
+    authors:
+      index:
+        new: " New Author"
+      new:
+        title: "New Author"
+      edit:
+        msg-not_found: "Not Found Author"
+        title: "Edit Author"
+      create:
+        msg-create: "Create Author Success"
+        msg-error: "Has Error"
+      destroy:
+        msg-delete: "Delete Author Success"
+      update:
+        msg-update: "Update Author Success"
+      delete:
+        msg-comf: "Are you sure you wish to delete "
+        msg-not_found: "Not Found Author"
+        title: "Delete Author"
+        bnt-yes: "Yes, Delete This Author"
+        bnt_no: "No, Please Don't"
+      form:
+        bnt-cancel: "Cancel"
     publishers:
       form:
         tbn-cancel: "Cancel"
