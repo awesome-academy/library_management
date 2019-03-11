@@ -7,6 +7,16 @@ en:
     log_out: "Log Out"
     log_in: "Log In"
   admin:
+    publishers:
+      form:
+        tbn-cancel: "Cancel"
+      index:
+        new: " New Publishers"
+        msg-search_name: "Search name .."
+        msg-search_id: "Search ID .."
+        search: "search"
+      create:
+        msg-create: "Create Publishers Success"
     books:
       index:
         tb-id: "Id"

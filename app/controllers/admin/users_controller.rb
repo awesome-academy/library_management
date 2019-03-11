@@ -26,7 +26,7 @@ class Admin::UsersController < ApplicationController
   def edit; end
 
   def update
-    if @user.update_attributes(user_params)
+    if @user.update_attributes(user_params_for_update)
       respond_to do |format|
         format.js {}
         flash[:success] = t(".msg-update")
@@ -74,6 +74,11 @@ class Admin::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email, :date_of_birth, :gender,
-      :phone, :address, :rote
+      :phone, :address, :role, :password, :password_confirmation
+  end
+
+  def user_params_for_update
+    params.require(:user).permit :name, :email, :date_of_birth, :gender,
+      :phone, :address, :role
   end
 end
