@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :users do
       get "delete"
     end
+    resources :books do
+      get "delete"
+    end
   end
 
 end

@@ -1,5 +1,22 @@
 en:
   admin:
+    books:
+      index:
+        tb-id: "Id"
+        tb-name: "Name"
+        tb-autor: "Author name"
+        tb-publisher: "Publisher name"
+        tb-quantity_of_pages: "Quantity of pages"
+        tb-publishing_year: "Publishing year"
+        tb-quantity_of_books: "Quantity of book"
+        btn-new: "New book"
+        msg-search_name_book: "Name Book ..."
+        msg-search_name_publisher: "Name Publisher ..."
+        msg-search_name_author: "Name Author"
+      create:
+        msg-create: "Create Book success"
+      form:
+        bnt-cancel: "Cancel"
     users:
       index:
         msg-search_name: "Search name .."
