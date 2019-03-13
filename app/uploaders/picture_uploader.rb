@@ -1,6 +1,6 @@
 class PictureUploader < CarrierWave::Uploader::Base
   def filename
-    "#{secure_token(10)}.#{file.extension}" if "image/book/original_filename".present?
+    "#{secure_token(10)}.#{file.extension}" if original_filename.present?
   end
   storage :file
 
