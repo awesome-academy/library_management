@@ -1,0 +1,9 @@
+<% provide(:title, t("author.all_author")) %>
+<h1><%= t("author.all_author") %></h1>
+
+<%= will_paginate %>
+
+<ul class="author" id="author-list">
+  <%= render @authors %>
+</ul>
+<%= will_paginate %>

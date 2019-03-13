@@ -13,5 +13,6 @@ Rails.application.routes.draw do
       get "delete"
     end
   end
+  resources :authors, only: %i(index show)
 
 end

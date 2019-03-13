@@ -108,3 +108,6 @@ en:
     quantity_page: "Quantity of page: "
     quantity_book: "Quantity:  "
     price: "Price: "
+  header_author: "Author"
+  author:
+    all_author: "List Author"
