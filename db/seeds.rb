@@ -1,4 +1,6 @@
 User.create!(email: "phambadat.97@gmail.com",
+              password: "12071997",
+              password_confirmation: "12071997",
               name: "Pham Ba Dat",
               gender: User.genders[:male],
               date_of_birth: "12/07/1997",
@@ -7,6 +9,8 @@ User.create!(email: "phambadat.97@gmail.com",
               role: 1)
 
 User.create!(email: "hotrunganh@gmail.com",
+              password: "123456",
+              password_confirmation: "123456",
               name: "Ho Trung Anh",
               gender: User.genders[:male],
               date_of_birth: "12/07/1997",
@@ -56,7 +60,7 @@ Book.create!(category_id: 1,
              publishing_year: 1959,
              quantity_of_books: 20,
              price: 20000,
-             image: "image/book/truyenkieu.jpg")
+             image: File.open(Rails.root + "public/truyenkieu.jpg"))
 Book.create!(category_id: 1,
              publisher_id: 2,
              name: "Duyên kỳ ngộ",
@@ -65,7 +69,7 @@ Book.create!(category_id: 1,
              publishing_year: 1939,
              quantity_of_books: 15,
              price: 40000,
-             image: "image/book/truyenkieu.jpg")
+             image: File.open(Rails.root + "public/truyenkieu.jpg"))
 Book.create!(category_id: 2,
              publisher_id: 3,
              name: "Việt Bắc",
@@ -74,7 +78,7 @@ Book.create!(category_id: 2,
              publishing_year: 1954,
              quantity_of_books: 30,
              price: 35000,
-             image: "image/book/truyenkieu.jpg")
+             image: File.open(Rails.root + "public/truyenkieu.jpg"))
 Book.create!(category_id: 2,
              publisher_id: 2,
              name: "Anh Có Nge Không",
@@ -83,7 +87,7 @@ Book.create!(category_id: 2,
              publishing_year: 1956,
              quantity_of_books: 10,
              price: 32000,
-             image: "image/book/truyenkieu.jpg")
+             image: File.open(Rails.root + "public/truyenkieu.jpg"))
 Book.create!(category_id: 5,
              publisher_id: 1,
              name: "Trái cam vàng",
@@ -92,7 +96,7 @@ Book.create!(category_id: 5,
              publishing_year: 1973,
              quantity_of_books: 20,
              price: 16000,
-             image: "image/book/truyenkieu.jpg")
+             image: File.open(Rails.root + "public/truyenkieu.jpg"))
 
 AuthorBook.create!(author_id: 1,
                    book_id: 1)
