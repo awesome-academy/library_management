@@ -6,6 +6,21 @@ en:
     settings: "Setting"
     log_out: "Log Out"
     log_in: "Log In"
+    update: "Update Now"
+    edit: "Edit"
+    my_profile: "My Profile"
+    information: "Please tell us your information"
+    gmail: "Gmail"
+    date_birth: "Date of birth"
+    gender: "Gender"
+    phone: "Phone"
+    address: "Address"
+    role: "Role"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%d/%m/%Y"
   admin:
     books:
       index:
