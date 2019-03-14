@@ -1,7 +1,9 @@
 <div class="container">
   <div class="well">
-    <%= link_to t(".btn-new"), new_admin_book_path, remote: true, class: "btn btn-primary" %>
-    <div class="new-product"></div>
+    <%= link_to  new_admin_book_path, remote: true,
+      class: "btn btn-primary" do %>
+      <span class="glyphicon glyphicon-plus"></span><%= t(".btn-new") %>
+    <% end %>
   </div>
 
   <div class="input-group">

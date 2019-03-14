@@ -1,6 +1,23 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to t("framgia_library"), root_path, id: "logo" %>
+    <ul class="nav navbar-nav ">
+        <li class="dropdown">
+          <% if user_signed_in? %>
+            <% if current_user.admin? %>
+                <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+                  <%= t ".for_admin" %><b class="caret"></b>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".mn-users"),  admin_users_path %></li>
+                  <li><%= link_to t(".mn-books"),  admin_books_path %></li>
+                  <li><%= link_to t(".mn-publishers"),  admin_publishers_path %></li>
+                  <li><%= link_to t(".mn-author"),  "#" %></li>
+                </ul>
+            <% end %>
+          <% end %>
+        </li>
+    </ul>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("root"), root_path %></li>

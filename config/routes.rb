@@ -17,5 +17,4 @@ Rails.application.routes.draw do
     end
   end
   resources :authors, only: %i(index show)
-
 end
