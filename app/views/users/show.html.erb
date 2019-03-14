@@ -1,0 +1,47 @@
+<div class="container">
+  <h3 class="site-title"><%= t("user.my_profile") %></h3>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="panel">
+          <div class=" panel-body ">
+            <div class="col-md-5">
+              <img class="img-responsive" src="http://www.pvhc.net/img240/uyttxprhsqycyximpzjb.png">
+              <i class="fa fa-wrench"> <%= t("user.edit") %></i>
+              <div class=" clearfix">
+                <h3><%= current_user.name %></h3>
+                <div class="profile-ratings">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <h4><%= t("user.information") %></h4>
+                <%= link_to t("user.update"), edit_user_registration_path, class: "btn btn-success btn-md pull-center"%>
+              </div>
+            </div>
+            <div class="col-md-7">
+             <div class="profile-block">
+              <ul class="list-group">
+                <li class="list-group-item"><%= t("user.gmail") %>
+                  <span class="badges"><%= current_user.email %></span></li>
+                <li class="list-group-item"><%= t("user.date_birth") %>
+                  <span class="badges"><%= l current_user.date_of_birth, format: :long %></span></li>
+                <li class="list-group-item"><%= t("user.gender") %>
+                  <span class="badges"><%= current_user.gender %></span></li>
+                <li class="list-group-item"><%= t("user.phone") %>
+                  <span class="badges"><%= current_user.phone %></span></li>
+                <li class="list-group-item"><%= t("user.address") %>
+                  <span class="badges"><%= current_user.address %></span></li>
+                <li class="list-group-item"><%= t("user.role") %>
+                  <span class="badges"><%= current_user.role %></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
