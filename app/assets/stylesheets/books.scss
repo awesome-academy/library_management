@@ -245,7 +245,7 @@ img {
 
 .product-title, .price, .sizes, .colors {
   text-transform: UPPERCASE;
-  font-weight: bold; }
+}
 
 .checked, .price span {
   color: $vivid-orange; }
@@ -348,4 +348,8 @@ img {
 .add-to-cart.btn.btn-default{
   float: left;
   margin-right: 10px;
+}
+
+.add.btn.btn-primary.form-control{
+  margin-top: 10px;
 }

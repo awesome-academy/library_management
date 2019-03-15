@@ -126,3 +126,18 @@ en:
   header_author: "Author"
   author:
     all_author: "List Author"
+    name: "Name Author"
+    follow: "followe"
+    profile: "Profile"
+    book: "Works of %{name}"
+  review:
+    cout: "Review"
+    contents: "Contents"
+    add: "Review Now!"
+    content: "Contents: "
+    successful: "Successfully Commented"
+    fails: "Comment Failed"
+    delete: "Successfully deleted"
+    you_sure: "Are you sure?"
+    destroy: "Destroy"
+    close: "Close"
