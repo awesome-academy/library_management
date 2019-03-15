@@ -30,8 +30,25 @@ en:
         msg-search_name: "Search name .."
         msg-search_id: "Search ID .."
         search: "search"
+        new: " New Publisher"
+        tb-id: "ID"
+        tb-name: "Name"
+        tb-address: "Address"
+        tb-action: "Action"
       create:
         msg-create: "Create Publishers Success"
+      update:
+        msg-update: "Update Publishers Success"
+      edit:
+        title: "Edit "
+      destroy:
+        msg-delete: "Delete Publishers Success"
+      delete:
+        msg-comf: "Are you sure you wish to delete "
+        msg-not_found: "Not Found publisher"
+        title: "Delete Publisher"
+        bnt-yes: "Yes, Delete This Publisher"
+        bnt_no: "No, Please Don't"
     books:
       index:
         tb-id: "Id"
@@ -41,7 +58,7 @@ en:
         tb-quantity_of_pages: "Quantity of pages"
         tb-publishing_year: "Publishing year"
         tb-quantity_of_books: "Quantity of book"
-        btn-new: "New book"
+        btn-new: " New book"
         msg-search_name_book: "Name Book ..."
         msg-search_name_publisher: "Name Publisher ..."
         msg-search_name_author: "Name Author"
@@ -68,7 +85,7 @@ en:
         edit: "Edit"
         show: "Show"
         delete: "Delete"
-        bnt-new_user: "New User"
+        bnt-new_user: " New User"
         tb-no: "No."
         tb-id: "Id"
         tb-name: "Name"
@@ -97,6 +114,10 @@ en:
   layouts:
     header:
       for_admin: "For Admin"
+      mn-users: "Manager users"
+      mn-books: "Manager books"
+      mn-publishers: "Manager publishers"
+      mn-author:  "Manager author"
   shared:
     show_notification:
       html:

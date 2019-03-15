@@ -25,6 +25,28 @@ class Admin::PublishersController < ApplicationController
 
   def edit; end
 
+  def update
+    if @publisher.update_attributes(publisher_params)
+      flash[:success] = t ".msg-update"
+    else
+      flash[:danger] = t ".msg-error"
+    end
+    respond_to do |format|
+      format.js {}
+    end
+  end
+
+  def destroy
+    if @publisher.destroy
+      flash[:success] = t ".msg-delete"
+    else
+      flash[:danger] = t ".msg-error"
+    end
+    respond_to do |format|
+      format.js {}
+    end
+  end
+
   private
 
   def load_publishers

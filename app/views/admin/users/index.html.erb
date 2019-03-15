@@ -1,6 +1,9 @@
 <div class="container">
   <div class="well">
-    <%= link_to t(".bnt-new_user"), new_admin_user_path, remote: true, class: "btn btn-primary" %>
+    <%= link_to  new_admin_user_path, remote: true,
+      class: "btn btn-primary" do %>
+      <span class="glyphicon glyphicon-plus"></span><%= t(".bnt-new_user") %>
+    <% end %>
     <div class="new-product"></div>
   </div>
 
