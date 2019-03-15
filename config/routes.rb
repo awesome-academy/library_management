@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :books do
       get "delete"
     end
+    resources :publishers do
+      get "get_publisher"
+    end
   end
   resources :authors, only: %i(index show)
 

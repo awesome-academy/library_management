@@ -1,0 +1,18 @@
+<tr>
+  <td><%= publisher.id %></td>
+  <td><%= publisher.name %></td>
+  <td><%= publisher.address %></td>
+  <td>
+    <%= link_to t(".show"), admin_publisher_path(publisher), remote: true %>
+    &nbsp;
+    <%= link_to edit_admin_publisher_path(publisher),
+      remote: true do %>
+      <i class="glyphicon glyphicon-wrench"></i>
+    <% end %>
+    &nbsp;
+    <%= link_to admin_publisher_get_publisher_path(publisher), remote: true,
+      class: "delete-user" do %>
+      <i class="glyphicon glyphicon-remove"></i>
+    <% end %>
+  </td>
+</tr>
