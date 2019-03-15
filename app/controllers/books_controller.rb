@@ -1,6 +1,8 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: :show
   before_action :load_book, only: :show
   before_action :load_category, only: :index
+  authorize_resource
 
   def index
     @search = Book.ransack params[:q]

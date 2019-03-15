@@ -126,3 +126,13 @@ en:
   header_author: "Author"
   author:
     all_author: "List Author"
+    name: "Name Author"
+  review:
+    cout: "Review"
+    contents: "Contents"
+    add: "Review Now!"
+    content: "Contents: "
+    successful: "Successfully Commented"
+    fails: "Comment Failed"
+    delete: "Successfully deleted"
+    you_sure: "Are you sure?"

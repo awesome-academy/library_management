@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :users
   root "static_pages#home"
 
-  resources :books
+  get "reviews/show"
+  resources :books do
+    resources :reviews
+  end
   namespace :admin do
     resources :users do
       get "delete"
