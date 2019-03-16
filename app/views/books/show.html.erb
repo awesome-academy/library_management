@@ -21,7 +21,7 @@
           </div>
           <span class="review-no"><%= t("books.category") %><%= link_to @book.category_name %></span>
           <br>
-          <span class="review-no"><%= t("books.author") %><%= link_to @book.writers %></span>
+          <span class="review-no"><%= t("books.author") %><%= link_to @book.writers, author_path %></span>
           <br>
           <span class="review-no"><%= t("books.publisher") %><%= link_to @book.publisher_name %></span>
           <br>
@@ -39,8 +39,12 @@
           <% end %>
           <button class="like btn btn-default" type="button"><span class="fa fa-thumbs-o-up"></span></button>
           <button class="like btn btn-default" type="button"><span class="fa fa-thumbs-o-down"></span></button>
+          <%= link_to reviews_show_path, remote: true do %>
+            <button data-toggle="modal" data-target="#myModal" class="like btn btn-default" type="button"><span class="fa fa-comments-o "></span></button>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+<%= render "reviews/show" %>
