@@ -13,7 +13,6 @@ class ReviewsController < ApplicationController
       @book = @review.book
       flash[:success] = t "review.successful"
     else
-      @book = Array.new
       flash[:danger] = t "review.fails"
     end
     respond_to do |format|
@@ -26,7 +25,6 @@ class ReviewsController < ApplicationController
       @book = @review.book
       flash[:success] = t "review.delete"
     else
-      @book = Array.new
       flash[:danger] = t "review.fails"
     end
     respond_to do |format|
@@ -44,6 +42,6 @@ class ReviewsController < ApplicationController
     @review = Review.find_by id: params[:id]
     return if @review
     flash[:danger] = t "messenger.no_data"
-    redirect_to tour_path @review.book_id
+    redirect_to book_path
   end
 end

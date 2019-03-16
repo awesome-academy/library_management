@@ -5,7 +5,9 @@
 <%= time_ago_in_words(review.created_at) %>
 <br>
 <% if can? :destory, review %>
-  <%= link_to "delete", [review.book, review], remote: true, method: :delete, data: { confirm: t("review.you_sure") } %>
+  <%= link_to t("review.destory"), [review.book, review],
+    remote: true, method: :delete,
+    data: { confirm: t("review.you_sure") } %>
 <% end %>
 <br>
 <br>

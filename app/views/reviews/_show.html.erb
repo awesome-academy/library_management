@@ -9,7 +9,7 @@
         <div id="review">
           <%= render @book.reviews %>
         </div>
-        <%= form_for @book.reviews.build, remote: true, url: book_reviews_path(@book),
+        <%= form_for load_review, remote: true, url: book_reviews_path(@book),
           method: :post do |f| %>
           <%= f.hidden_field :user_id, value: current_user.id %>
           <%= f.hidden_field :book_id, value: @book.id %>
@@ -19,7 +19,7 @@
         <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("review.close") %></button>
       </div>
     </div>
   </div>

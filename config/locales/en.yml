@@ -127,6 +127,9 @@ en:
   author:
     all_author: "List Author"
     name: "Name Author"
+    follow: "followe"
+    profile: "Profile"
+    book: "Works of %{name}"
   review:
     cout: "Review"
     contents: "Contents"
@@ -136,3 +139,6 @@ en:
     fails: "Comment Failed"
     delete: "Successfully deleted"
     you_sure: "Are you sure?"
+    destroy: "Destroy"
+    close: "Close"
+    space: ">"

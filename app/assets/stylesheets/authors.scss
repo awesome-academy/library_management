@@ -2,22 +2,30 @@
 @import 'bootstrap';
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$white: #fff;
+$very-light: #eee;
+$dark-cyan: #007b5e;
+$very-dark-gray: #333;
+$strong-blue: #0062cc;
+$dark-grayish: #6c757d;
+
 #team {
-    background: #eee !important;
+    background: $very-light !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: #108d6f;
-    border-color: #108d6f;
+    background-color: $dark-cyan;
+    border-color: $dark-cyan;
     box-shadow: none;
     outline: none;
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #007b5e;
-    border-color: #007b5e;
+    color: $white;
+    background-color: $dark-cyan;
+    border-color: $dark-cyan;
 }
 
 section {
@@ -26,14 +34,14 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #007b5e;
+    color: $dark-cyan;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 
 #team .cards {
     border: none;
-    background: #ffffff;
+    background: $white;
 }
 
 .image-flip:hover .backside,
@@ -117,12 +125,12 @@ section .section-title {
 
 .backside .cards a {
     font-size: 18px;
-    color: #007b5e !important;
+    color: $dark-cyan !important;
 }
 
 .frontside .cards .cards-title,
 .backside .cards .cards-title {
-    color: #007b5e !important;
+    color: $dark-cyan !important;
 }
 
 .frontside .cards .cards-body img {
@@ -141,4 +149,71 @@ section .section-title {
 .col-md-12.au{
   margin-left: 108px;
   margin-top: 20px;
+}
+
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: $white;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+  width: 250px;
+  height: 250px;
+}
+.profile-head h5{
+    color: $very-dark-gray;
+}
+.profile-head h6{
+    color: $strong-blue;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: $dark-grayish;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: $dark-grayish;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: $dark-grayish;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid $strong-blue;
+}
+
+.profile-tab label{
+    font-weight: 600;
+}
+.author.col-md-8{
+  margin-left: 400px;
+  margin-top: -90px;
+}
+.nav.nav-tabs{
+  margin-top: 15px;
+}
+.space{
+  float: left;
+  margin-top: -5px;
+  margin-right: 5px;
 }
