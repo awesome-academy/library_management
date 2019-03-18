@@ -1,5 +1,5 @@
 <%= search_form_for @search, remote: true, class: "col-md-12 au" do |f| %>
-  <%= f.label :Name_author %>
+  <%= f.label t("author.name") %>
   <%= f.text_field :name_cont %>
   <%= f.submit t("books.search"), class: "btn btn-primary" %>
 <% end %>

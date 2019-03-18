@@ -1,0 +1,26 @@
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= @book.reviews.count %> <%= t("review.cout") %></h4>
+      </div>
+      <div class="modal-body">
+        <div id="review">
+          <%= render @book.reviews %>
+        </div>
+        <%= form_for load_review, remote: true, url: book_reviews_path(@book),
+          method: :post do |f| %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :book_id, value: @book.id %>
+          <%= f.label t "review.contents" %>
+          <%= f.text_field :content, class: "form-control" %>
+          <%= f.submit t("review.add"), class: "add btn btn-primary form-control" %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("review.close") %></button>
+      </div>
+    </div>
+  </div>
+</div>

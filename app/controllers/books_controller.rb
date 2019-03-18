@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: :show
+  authorize_resource
   before_action :load_book, only: :show
   before_action :load_category, only: :index
 
