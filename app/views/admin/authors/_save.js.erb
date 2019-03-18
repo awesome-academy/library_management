@@ -1,0 +1,14 @@
+$('ul.errors').html('')
+<% if @author.errors.any? %>
+  <% @author.errors.full_messages.each do |message| %>
+    $('ul.errors').append($('<li />').html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $('#author-modal').modal('hide')
+  $('#notification-modal').html('<%= escape_javascript(render "shared/show_notification.html") %>')
+  $('#notification-div').prepend('<%= j render "shared/flash" %>')
+  $('#notification-modal').modal('show')
+  $('#notification-modal').on('hidden.bs.modal', function () {
+  location.reload();
+  })
+<% end %>

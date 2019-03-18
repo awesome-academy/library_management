@@ -3,5 +3,7 @@ class Author < ApplicationRecord
   has_many :author_books
   has_many :books, through: :author_books
 
-  scope :newest, ->{order :created_at}
+  mount_uploader :avatar, PictureUploader
+
+  scope :newest, ->{order name: :ASC}
 end

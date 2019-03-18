@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="well">
+    <%= link_to  new_admin_author_path, remote: true,
+    class: "btn btn-primary" do %>
+    <span class="glyphicon glyphicon-plus"></span><%= t(".new") %>
+    <% end %>
+    <div class="new-product"></div>
+  </div>
+
+  <div class="input-group">
+    <%= search_form_for [:admin, @search],class: "navbar-form" do |f| %>
+    <%= f.text_field :name_cont, class: "form-control", value: "", placeholder: "search name ..." %>
+    <%= f.text_field :id_in, class: "form-control", value: "", placeholder: " search id " %>
+    <div class="input-group-btn">
+      <%= button_tag class: "btn btn-default", value: "search" do %>
+      <i class="glyphicon glyphicon-search"></i>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= t(".tb-id") %></th>
+      <th><%= t(".tb-name") %></th>
+      <th><%= t(".tb-profile") %></th>
+      <th><%= t(".tb-acction") %></th>
+    </tr>
+  </thead>
+  <tbody class="author-index">
+    <% @authors.each do |author| %>
+    <tr>
+      <td><%= author.id %></td>
+      <td><%= author.name %></td>
+      <td><%= author.profile %></td>
+      <td>
+        <%= link_to t(".show"), admin_author_path(author), remote: true %>
+        &nbsp;
+        <%= link_to edit_admin_author_path(author),
+        remote: true do %>
+        <i class="glyphicon glyphicon-wrench"></i>
+        <% end %>
+        &nbsp;
+        <%= link_to admin_author_delete_path(author), remote: true,
+        class: "delete-user" do %>
+        <i class="glyphicon glyphicon-remove"></i>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate %>
+</div>
+<div id="author-modal" class="modal fade"></div>
+<div id="notification-modal" class=" modal fade"></div>
